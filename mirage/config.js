@@ -1,11 +1,11 @@
 export default function() {
   this.namespace = '/api';
 
-  let users = [{
+  let users = [
     {
       id: 1,
-      first_name: 'Yori',
-      last_name: 'Högemann',
+      firstName: 'Yori',
+      lastName: 'Högemann',
       position: 'CEO',
       age: 'Older',
       nicknames: ['Heug', 'Sales koning'],
@@ -14,8 +14,8 @@ export default function() {
     },
     {
       id: 1,
-      first_name: 'Rick',
-      last_name: 'HögeHermansmann',
+      firstName: 'Rick',
+      lastName: 'HögeHermansmann',
       position: 'CEO',
       age: 'Older',
       nicknames: ['Tricot'],
@@ -24,8 +24,8 @@ export default function() {
     },
     {
       id: 1,
-      first_name: 'Alvin',
-      last_name: 'Vogelzang',
+      firstName: 'Alvin',
+      lastName: 'Vogelzang',
       position: 'CTO',
       age: 'Nearing 30',
       nicknames: ['Un', 'Allie', 'Lee'],
@@ -34,8 +34,8 @@ export default function() {
     },
     {
       id: 1,
-      first_name: 'Peter',
-      last_name: "van 't Zand",
+      firstName: 'Peter',
+      lastName: "van 't Zand",
       position: 'Full Stack',
       age: 'Over 30',
       nicknames: ['Reet', 'PeetReet'],
@@ -44,8 +44,8 @@ export default function() {
     },
     {
       id: 1,
-      first_name: 'Sem',
-      last_name: 'Rudolph',
+      firstName: 'Sem',
+      lastName: 'Rudolph',
       position: 'Intern',
       age: 'still in his teenage years',
       nicknames: ['Dries'],
@@ -54,17 +54,17 @@ export default function() {
     },
     {
       id: 1,
-      first_name: 'Djoeke',
-      last_name: 'Kingma',
+      firstName: 'Djoeke',
+      lastName: 'Kingma',
       position: 'Customer Success',
       age: "Mid 20's",
       nicknames: ['Djoekert', 'Djoekie'],
       city: 'Amsterdam',
       avatar_src: 'https://media.licdn.com/dms/image/C5603AQEliIFxaXCrmA/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=sW3bBFod4zFwAvQ8bxXW-H2W4BO-5peS14Lj6PUY_YU'
-    },
-  }]
+    }
+  ]
 
-  this.get('/about', function(db, request) {
-    return users
+  this.get('/users', function(db, request) {
+    return { data: users } ;
   });
 }
