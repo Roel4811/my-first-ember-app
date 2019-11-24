@@ -1,7 +1,19 @@
 @import 'about.css';
 @import 'components/buttons.css';
 @import 'components/avatar.css';
+@import 'components/card.css';
 
 body {
   font-family: 'Muli', sans-serif;
+}
+h1 {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1.1em;
+  line-height: 35px;
 }

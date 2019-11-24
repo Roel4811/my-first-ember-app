@@ -1,0 +1,15 @@
+<h3>The Markers Team</h3>
+{{#each users as |user|}}
+  <div class="card-product">
+    <img class="avatar-large" alt="avatar-large" src="{{ user.avatar }}" />
+    <div class="card-product-infos">
+      <h2>{{ user.firstName }}</h2>
+      <ul>
+        <li>{{ user.position }}</li>
+        <li>a.k.a {{ user.nicknames }}</li>
+        <li>age: {{ user.age }}</li>
+        <li>hood: {{ user-location user.city }}</li>
+      </ul>
+    </div>
+  </div>
+{{/each}}
