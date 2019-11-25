@@ -1,11 +1,15 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
+import EmberObject, { computed } from '@ember/object';
 
 export default Model.extend({
-  id: attr('number'),
   name: attr('string'),
   createdTime: attr('date'),
   course: attr('string'),
-  marker_id: attr('number'),
   status: attr('string'),
-  feedback_id: attr('number')
+  user: belongsTo('user'),
+  feedbacks: hasMany('feedback'),
+
+  finished: computed('status', function() {
+    return this.status === 'finished'
+  })
 });
