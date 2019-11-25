@@ -1,9 +1,14 @@
-<h3>The Markers Team</h3>
+<ul class="list-inline tabs-underlined mb-5">
+  <li>
+    <span class="tab-underlined active">Team</span>
+  </li>
+</ul>
+
 {{#each users as |user|}}
   <div class="card-product">
     <img class="avatar-large" alt="avatar-large" src="{{ user.avatar }}" />
     <div class="card-product-infos">
-      <h2>{{ user.firstName }}</h2>
+      <h2>{{ user.fullName }}</h2>
       <ul>
         <li>{{ user.position }}</li>
         <li>a.k.a {{ user.nicknames }}</li>
