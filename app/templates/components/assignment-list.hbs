@@ -1,16 +1,24 @@
-<div class="assignments-container d-flex flex-wrap justify-content-center">
+<div class="assignments-container d-flex flex-wrap justify-content-start">
   {{#each assignments as |assignment|}}
-    <div class="assignment my-4 mx-4">
+    <div class="assignment my-4 mr-4">
       <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=709&q=80" />
       <div class="assignment-infos">
         <div>
           <h2>{{ assignment.course }}</h2>
+          <p>{{ assignment.name }}</p>
           {{#link-to "assignments.show" assignment class=assignment.id}}
-            <p>{{ assignment.name }}</p>
-            <p>{{ this.id }}</p>
+            {{#if assignment.finished }}
+              <button type="button" name="button" class="btn btn-green">
+                Bekijk Feedback
+              </button>
+            {{else}}
+              <button type="button" name="button" class="btn btn-orange" disabled>
+                In-pogress
+              </button>
+            {{/if}}
           {{/link-to}}
         </div>
-        <h2 class="assignment-pricing">{{ assignment.user.fullName }}</h2>
+        <p class="assignment-pricing">Marker: {{ assignment.user.fullName }}</p>
         <img src={{ assignment.user.avatar }} class="assignment-user avatar-bordered" />
       </div>
     </div>
