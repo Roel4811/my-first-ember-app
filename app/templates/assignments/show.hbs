@@ -1,1 +1,14 @@
-{{outlet}}
+<h1>{{ this.model.name }}</h1>
+
+<div class="card-product">
+  <img class="avatar-large" alt="avatar-large" src="{{ this.model.user.avatar }}" />
+  <div class="card-product-infos">
+    <h2>Marker: {{ this.model.user.fullName }}</h2>
+    <p>Vak: {{ this.model.course }}</p>
+    <p>Aangemaakt: {{ this.model.createdTime }}</p>
+  </div>
+</div>
+
+<button name="button" type="submit" class="btn btn-flat">
+  Bekijk resultaten
+</button>

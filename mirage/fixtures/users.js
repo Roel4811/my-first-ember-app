@@ -1,7 +1,6 @@
 export default [
   {
     id: 1,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Yori',
@@ -14,7 +13,6 @@ export default [
   },
   {
     id: 2,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Rick',
@@ -27,7 +25,6 @@ export default [
   },
   {
     id: 3,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Alvin',
@@ -40,7 +37,6 @@ export default [
   },
   {
     id: 4,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Peter',
@@ -53,7 +49,6 @@ export default [
   },
   {
     id: 5,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Sem',
@@ -66,7 +61,6 @@ export default [
   },
   {
     id: 6,
-    type: 'users',
     assignmentIds: [],
     type: 'employee',
     firstName: 'Djoeke',
@@ -79,28 +73,26 @@ export default [
   },
   {
     id: 7,
-    type: 'users',
     assignmentIds: [1, 2, 5],
     type: 'marker',
     firstName: 'Juf',
     lastName: 'Ank',
-    position: 'Customer Success',
-    age: "Mid 20's",
-    nicknames: ['Djoekert', 'Djoekie'],
+    position: 'marker',
+    age: "Mid 40's",
+    nicknames: ['Ankie', 'Juf'],
     city: 'Amsterdam',
-    avatar: 'https://media.licdn.com/dms/image/C5603AQEliIFxaXCrmA/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=sW3bBFod4zFwAvQ8bxXW-H2W4BO-5peS14Lj6PUY_YU'
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF8oFL5aCc-WXSGVBMzFurh0cHxCyimbOkd8AyemlsBTASbpRrrQ&s'
   },
   {
     id: 8,
-    type: 'users',
     assignmentIds: [3, 4],
     type: 'marker',
     firstName: 'Anton',
     lastName: 'Flier',
-    position: 'Customer Success',
-    age: "Mid 20's",
-    nicknames: ['Djoekert', 'Djoekie'],
+    position: 'marker',
+    age: "50",
+    nicknames: ['Meester', 'Marker'],
     city: 'Amsterdam',
-    avatar: 'https://media.licdn.com/dms/image/C5603AQEliIFxaXCrmA/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=sW3bBFod4zFwAvQ8bxXW-H2W4BO-5peS14Lj6PUY_YU'
+    avatar: 'https://www.viraltje.nl/wp-content/uploads/2019/02/mbjhk.jpg'
   }
 ];

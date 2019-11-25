@@ -5,14 +5,17 @@ export default function() {
     return schema.users.all();
   });
 
-  this.get('/users/:id', (schema, request) => {
-    var id = request.params.id;
-
-    return schema.users.find(id);
-  });
-
   this.get('/assignments', (schema, request) => {
-    return schema.assignments.all();
+    let assignments = schema.assignments.all();
+
+    if(request.queryParams.name !== undefined) {
+      let filteredAssignments = assignments.filter(function(assignment) {
+        return assignment.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
+      });
+      return filteredAssignments;
+    } else {
+      return assignments;
+    }
   });
 
   this.get('/assignments/:id', (schema, request) => {

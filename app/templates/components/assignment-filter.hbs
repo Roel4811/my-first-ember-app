@@ -1,0 +1,15 @@
+<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="search-form-control form-group">
+    {{input
+      value=this.value
+      key-up=(action "handleFilterEntry")
+      class="form-control string required"
+      placeholder="Je kan zoeken op naam"
+    }}
+    <button name="button" type="submit" class="btn btn-flat" disabled>
+      <i class="fas fa-search"></i> Zoek door te typen
+    </button>
+  </div>
+</form>
+
+{{yield this.results}}

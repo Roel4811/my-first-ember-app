@@ -1,1 +1,9 @@
+<AssignmentFilter
+ @filter={{action "filterByName"}} as |filteredResults|
+>
+  <div class="results cards-container d-flex flex-column">
+    <Assignment-list @assignments={{ filteredResults }}/>
+  </div>
+
+</AssignmentFilter>
 {{outlet}}
