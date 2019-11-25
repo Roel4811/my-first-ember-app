@@ -7,7 +7,7 @@
       <div class="card-product-infos">
         <h2>Marker: {{ this.model.user.fullName }}</h2>
         <p>Vak: {{ this.model.course }}</p>
-        <p>Aangemaakt: {{ this.model.createdTime }}</p>
+        <p>Aangemaakt: {{moment-format feedback.createdTime 'MMMM Do YYYY, h:mm:ss a'}}</p>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
       <h2></h2>
       <tr class="table-{{ status-class feedback.status }}">
         <th scope="row">{{ feedback.id }}</th>
-        <td>{{ feedback.createdTime }}</td>
+        <td>{{moment-format feedback.createdTime 'MMMM Do YYYY, h:mm:ss a'}}</td>
         <td>{{ feedback.studentName }}</td>
         <td>{{ feedback.assignment.name }}</td>
         <td>{{ feedback.status }}</td>
