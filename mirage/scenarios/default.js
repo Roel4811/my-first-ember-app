@@ -2,5 +2,5 @@ export default function(server) {
 
   server.loadFixtures();
 
-  server.createList('feedback', 4);
+  server.createList('feedback', 20);
 }
