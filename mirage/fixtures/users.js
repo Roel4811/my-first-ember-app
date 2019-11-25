@@ -16,7 +16,7 @@ export default [
     assignmentIds: [],
     type: 'employee',
     firstName: 'Rick',
-    lastName: 'HögeHermansmann',
+    lastName: 'Hermans',
     position: 'CEO',
     age: 'Older',
     nicknames: ['Tricot'],
