@@ -1,7 +1,7 @@
 .card-product {
   border-radius: 100px 0 0 100px;
   padding: 0px;
-  width: 350px;
+  width: 450px;
   overflow: hidden;
   height: 120px;
   margin: 25px 0;
@@ -24,7 +24,7 @@
 }
 
 ul {
-  list-style-type: upper-roman;
+  list-style-type: hangul-consonant;
 }
 
 .card-product p, li {
