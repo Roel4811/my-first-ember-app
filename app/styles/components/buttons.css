@@ -20,9 +20,30 @@
   transition: background 0.3s ease;
 }
 
-.btn-flat:hover {
-  background: #dec106;
-  color: #4e4646;
+.btn-green {
+  background: #28a745;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover {
+  background: #28a745c9;
+  color: white;
+}
+
+.btn-orange {
+  background: #ffc107;
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-orange:hover {
+  background: #ffc107;
+  color: black;
 }
 
 .btn-gradient {
