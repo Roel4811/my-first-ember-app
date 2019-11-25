@@ -1,14 +1,38 @@
-<h1>{{ this.model.name }}</h1>
+<h2>Resultaten van <strong>{{ this.model.name }}</strong></h2>
 
-<div class="card-product">
-  <img class="avatar-large" alt="avatar-large" src="{{ this.model.user.avatar }}" />
-  <div class="card-product-infos">
-    <h2>Marker: {{ this.model.user.fullName }}</h2>
-    <p>Vak: {{ this.model.course }}</p>
-    <p>Aangemaakt: {{ this.model.createdTime }}</p>
+<div class="row">
+  <div class="col">
+    <div class="card-product mb-5">
+      <img class="avatar-large" alt="avatar-large" src="{{ this.model.user.avatar }}" />
+      <div class="card-product-infos">
+        <h2>Marker: {{ this.model.user.fullName }}</h2>
+        <p>Vak: {{ this.model.course }}</p>
+        <p>Aangemaakt: {{ this.model.createdTime }}</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<button name="button" type="submit" class="btn btn-flat">
-  Bekijk resultaten
-</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Datum</th>
+      <th scope="col">Naam</th>
+      <th scope="col">Assignment</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.model.feedbacks as |feedback| }}
+      <h2></h2>
+      <tr class="table-{{ status-class feedback.status }}">
+        <th scope="row">{{ feedback.id }}</th>
+        <td>{{ feedback.createdTime }}</td>
+        <td>{{ feedback.studentName }}</td>
+        <td>{{ feedback.assignment.name }}</td>
+        <td>{{ feedback.status }}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
