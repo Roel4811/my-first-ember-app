@@ -5,6 +5,7 @@
 @import 'components/assignment.css';
 @import 'components/search.css';
 @import 'components/tabs.css';
+@import 'components/footer.css';
 
 body {
   font-family: 'Muli', sans-serif;
